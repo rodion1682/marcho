@@ -74,6 +74,125 @@
 
 /* header section setup ends ////////////////////////// */
 
+/* footer section setup starts ////////////////////////// */
+
+.footer{
+  background-color: $bg;
+}
+
+/* footer-top setup starts */
+
+.footer-top{
+  padding: 70px 0 40px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  &__contact{
+    width: 250px;
+    margin-right: 50px;
+  }
+  &__nav{
+    width: 170px;
+    margin-right: 30px;
+  }
+  &__item-form{
+    max-width: 470px;
+  }
+  &__logo{
+    margin-bottom: 33px;
+    display: block;
+  }
+  &__adress,
+  &__email,
+  &__phone{
+    margin-bottom: 14px;
+    display: block;
+  }
+  &__social-list{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+  &__social-item + .footer-top__social-item{
+    padding-left: 18px;
+  }
+  &__social-link{
+    transition: all 0.5s;
+    path{
+      fill: $default;
+    }
+    &:hover{
+      path{
+        fill: $accent;
+      } 
+    }
+  }
+  &__title{
+    color: $title;
+    @extend %regular-400;
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 1;
+  }
+  &__link{
+    margin-bottom: 14px;
+    display: block
+  }
+  &__text{
+    margin-bottom: 25px;
+  }
+  &__form-input{
+    background-color: #fff;
+    max-width: 320px;
+    width: 100%;
+    border: none;
+    padding: 12px 10px 12px 15px;
+    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    &::placeholder{
+      color: $default;
+      font-size: 16px;
+    }
+  }
+  &__form-btn{
+    @extend %btn;
+  }
+}
+
+/* footer-top setup ends */
+
+/* footer-bottom setup ends */
+
+.footer-bottom{
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  &__accept-img{
+    display: inline;
+    margin-left: 25px;
+    vertical-align: middle;
+  }
+}
+
+/* footer-bottom setup ends */
+
+/* footer section setup ends ////////////////////////// */
+
+/* top section setup starts ////////////////////////// */
+
+.top{
+  &__container{
+   max-width: 1700px;
+   margin: 0 auto;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   padding: 120px 0 130px;
+   text-align: center;
+  }
+}
+
+/* top section setup ends ////////////////////////// */
 
 /* top-slider section setup ends ////////////////////////// */
 
@@ -611,149 +730,64 @@
   }
 }
 
-
-
 /* blog section setup ends ////////////////////////// */
 
 
+/* modal section setup starts ////////////////////////// */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer section setup starts ////////////////////////// */
-
-.footer{
-  background-color: $bg;
-}
-
-/* footer-top setup starts */
-
-.footer-top{
-  padding: 70px 0 40px;
-  border-bottom: 1px solid #ececec;
-  display: flex;
-  &__contact{
-    width: 250px;
-    margin-right: 50px;
-  }
-  &__nav{
-    width: 170px;
-    margin-right: 30px;
-  }
-  &__item-form{
-    max-width: 470px;
-  }
-  &__logo{
-    margin-bottom: 33px;
-    display: block;
-  }
-  &__adress,
-  &__email,
-  &__phone{
-    margin-bottom: 14px;
-    display: block;
-  }
-  &__social-list{
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-  }
-  &__social-item + .footer-top__social-item{
-    padding-left: 18px;
-  }
-  &__social-link{
-    transition: all 0.5s;
-    path{
-      fill: $default;
-    }
-    &:hover{
-      path{
-        fill: $accent;
-      } 
-    }
-  }
-  &__title{
-    color: $title;
-    @extend %regular-400;
+.modal{
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
+  &__links{
+    text-align: center;
     margin-bottom: 40px;
-    font-size: 22px;
-    line-height: 1;
   }
   &__link{
-    margin-bottom: 14px;
-    display: block
+    font-size: 22px;
+    color: #909090;
+    @extend %regular-400;
+    text-transform: uppercase;
+    margin: 0 30px;
   }
-  &__text{
-    margin-bottom: 25px;
+  &__link--active{
+    color: $accent;
   }
-  &__form-input{
-    background-color: #fff;
-    max-width: 320px;
+  &__label{
+    margin-bottom: 30px;
+    display: block;
+  }
+  &__input{
+    display: block;
     width: 100%;
     border: none;
-    padding: 12px 10px 12px 15px;
-    box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
-    &::placeholder{
-      color: $default;
-      font-size: 16px;
-    }
+    background-color: $bg;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
   }
-  &__form-btn{
-    @extend %btn;
+  &__btn{
+    display: block;
+    background-color: $title;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %regular-400;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
   }
-}
-
-/* footer-top setup ends */
-
-/* footer-bottom setup ends */
-
-.footer-bottom{
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  &__accept-img{
-    display: inline;
-    margin-left: 25px;
-    vertical-align: middle;
+  &__error{
+    margin-top: 12px;
+    color: $accent;
+    display: inline-block;
   }
 }
 
-/* footer-bottom setup ends */
+/* modal section setup ends ////////////////////////// */
 
-/* footer section setup ends ////////////////////////// */
+
+
 
 
 @import 'media';
