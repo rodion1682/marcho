@@ -789,7 +789,41 @@
 
 /* modal section setup ends ////////////////////////// */
 
+/* page-404 section setup starts ////////////////////////// */
 
+.page-404{
+  padding: 110px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__concent{
+    max-width: 570px;
+    width: 100%;
+  }
+  &__title{
+    color: #28384f;
+    font-size: 48px;
+    margin-bottom: 40px;
+    @extend %regular-700;
+  }
+  &__text{
+    margin-bottom: 55px;
+    max-width: 470px;
+  }
+  &__link{
+    background-color: $accent;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    padding: 14px 35px;
+    @extend %regular-400;
+    box-shadow: 0px 5px 25px 0px rgba(254, 62, 87, 0.35);
+  }
+}
+
+/* page-404 section setup ends ////////////////////////// */
 
 
 
