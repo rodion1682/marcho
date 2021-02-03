@@ -1886,5 +1886,135 @@
 
 /* blog-page setup ends ////////////////////////// */
 
+/* blog-one setup starts ////////////////////////// */
+
+.blog-one{
+  &__text{
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px;
+    margin-top: -1px;
+    h4{
+      color: $title;
+      font-size: 22px;
+      @extend %regular-700;
+      margin-bottom: 25px 0;
+    }
+    p{
+      margin: 25px 0;
+    }
+    blockquote{
+      background-color: $bg;
+      border-left: 3px solid $accent;
+      color: $title;
+      @extend %regular-400;
+      font-size: 22px;
+      margin-bottom: 25px 0;
+      padding: 35px;
+    }
+  }
+  &__left-image{
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  &__right-image{
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  &__info{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__info-link{
+    margin-right: 30px;
+    padding-left: 28px;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url('../images/icons/calendar.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__info-link--comment::before{
+    background-image: url('../images/icons/comment.svg');
+    top: 3px;
+  }
+  &__info-link--author::before{
+    background-image: url('../images/icons/user-blog.svg');
+  }
+  &__form-title{
+    text-transform: uppercase;
+    margin: 35px 0 25px;
+    color: $title;
+    font-size: 24px;
+    @extend %regular-700;
+  }
+  .comments-form{
+    border-bottom: none;
+  }
+  &__box{
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;  
+  }
+  &__tags,
+  &__share{
+    span{
+      text-transform: uppercase;
+      color: $title;
+      @extend %regular-700;
+      margin-right: 4px;
+    }
+  }
+  &__share{
+    a{
+      margin-right: 12px;
+      vertical-align: middle;
+      &:hover{
+        path{
+          fill: $accent;
+        }
+      }
+      path{
+        fill: #727272;
+      }
+    }
+  }
+  &__author{
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  &__author-image{
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-right: 30px;
+  }
+  &__author-name{
+    font-size: 22px;
+    color: $title;
+    @extend %regular-700;
+    margin-bottom: 24px;
+  }
+}
+
+.comments-title{
+  font-size: 24px;
+  color: $title;
+  margin-bottom: 25px;
+  @extend %regular-700;
+  text-transform: uppercase;
+}
+
+/* blog-one setup ends ////////////////////////// */
+
 
 @import 'media';
