@@ -1,10 +1,7 @@
-/* footer section setup starts ////////////////////////// */
 
 .footer{
   background-color: $bg;
 }
-
-/* footer-top setup starts */
 
 .footer-top{
   padding: 70px 0 40px;
@@ -85,13 +82,10 @@
   }
 }
 
-/* footer-top setup ends */
-
-/* footer-bottom setup ends */
-
 .footer-bottom{
-  height: 75px;
+  min-height: 75px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
@@ -102,6 +96,56 @@
   }
 }
 
-/* footer-bottom setup ends */
+@media (max-width: 1050px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      padding-top: 30px;
+      max-width: 100%;
+    }
+  }
+}
 
-/* footer section setup ends ////////////////////////// */
+@media (max-width: 860px){
+  .footer-top{
+    &__contact{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .footer-bottom{
+    justify-content: center;
+    &__copy{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 450px){
+  .footer-top{
+    &__nav{
+      margin-top: 30px;
+    }
+    &__form{
+      flex-wrap: wrap;
+    }
+    &__form-input{
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &__form-btn{
+      width: 100%;
+    }
+  }
+  .footer-bottom{
+    &__accept-img{
+      margin-left: 15px;
+    }
+  }
+}
+
